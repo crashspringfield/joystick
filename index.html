@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joystick</title>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap" rel="stylesheet">
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <main role="main" class="container content">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-md-3">
+        <div class="mb-30">
+          <p>
+            Joystick is an atonal, monophonic synthesizer built with <a href="https://tonejs.github.io" target="_blank" class="td-underline">Tone.js</a>.
+          </p>
+          <p>
+            Click and hold the sphere.
+          </p>
+          <p>
+            Drag it up and down to control pitch.
+          </p>
+          <p>
+            Move left and right to adjust Pulse Width Modulation.
+          </p>
+          <p>
+            Click 'hold' to keep playing pitch after release.
+          </p>
+        </div>
+        <div class="digital mb-10">
+          Frequency:
+          <span id="frequency-display"></span>
+        </div>
+        <div class="digital mb-10">
+          PWM:
+          <span id="modulation-display"></span>
+        </div>
+        <div class="digital mb-10">
+          <label class="digital-switch">
+            Hold
+            <input id="hold" type="checkbox">
+            <span class="digital-switch-light"></span>
+          </label>
+        </div>
+        <div class="digital mb-10">
+          <button id="reset" class="hover digital ditial-btn digital-outline">Reset / Stop</button>
+        </div>
+      </div> <!-- end instructions -->
+
+      <div class="col-xs-12 col-sm-8 col-md-9">
+        <div class="digital-outline joystick-container">
+          <div id="joystick" class="joystick"></div>
+        </div>
+      </div> <!-- end synth controller -->
+    </div> <!-- end row -->
+  </main>
+
+  <script src="./dist/main.js"></script>
+</body>
+</html>
